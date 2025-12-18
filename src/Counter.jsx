@@ -7,11 +7,12 @@ function Counter() {
     if (count !== 0 && count % 3 === 0) {
       alert(`The current number ${count} is divisible by 3`);
     }
-  }, [count]); // 👈 runs ONLY when count changes
+  }, [count]); // runs ONLY when count changes
 
   return (
     <div>
-      <h2>Count: {count}</h2>
+      <h2>Counter</h2>
+      <h3>Count: {count}</h3>
       <button onClick={() => setCount(count + 1)}>
         Increase
       </button>

@@ -11,22 +11,19 @@ function UserData() {
         setUser(data);
         setLoading(false);
       })
-      .catch((error) => {
-        console.error(error);
-        setLoading(false);
-      });
-  }, []);
+      .catch(() => setLoading(false));
+  }, []); // runs once on mount
 
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <h3>Loading...</h3>;
   }
 
   return (
     <div>
       <h2>User Data</h2>
-      <p><strong>Name:</strong> {user.name}</p>
-      <p><strong>Email:</strong> {user.email}</p>
-      <p><strong>Phone:</strong> {user.phone}</p>
+      <p><b>Name:</b> {user.name}</p>
+      <p><b>Email:</b> {user.email}</p>
+      <p><b>Phone:</b> {user.phone}</p>
     </div>
   );
 }
